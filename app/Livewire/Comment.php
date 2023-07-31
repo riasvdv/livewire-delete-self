@@ -11,6 +11,8 @@ class Comment extends Component
     public function delete()
     {
         $this->comment->delete();
+
+        $this->dispatch('delete');
     }
 
     public function render()
